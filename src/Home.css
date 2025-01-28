@@ -1,0 +1,23 @@
+.modal{
+   
+
+    .modal-main{
+        background-color: rgb(250, 250, 250);
+        height: 300px;
+        width: 400px;
+        box-shadow: 0 0 5px rgb(253, 6, 6) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation: modal 1s;
+    }
+            }
+            
+            @keyframes modal{
+    0%{transform: scale(0)}
+    100%{transform: scale(1) translate(-50%,-50%);}
+            }
