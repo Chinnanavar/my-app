@@ -26,6 +26,7 @@ import Home from './Home';
 import NamePage from './NamePage';
 import Provider from './Provider';
 import User from './User';
+import CustomCounter from './CustomCounter';
 
 
 
@@ -34,9 +35,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <User name="John" age={30} email="john@example.com" />
-    <User name="Bob" age={20} email="bob@example.com" />
-    <User name="Alice" age={10} email="alice@example.com" />
   <Provider>
       <Routes>
         <Route path="/:name" element={<App  />} />
@@ -60,6 +58,7 @@ root.render(
         <Route path="/state" element={<State />} />
         <Route path="/" element={<Home />} />
         <Route path="/name/:name" element={<NamePage />} />
+        <Route path='/custom' element={<CustomCounter />} />
        
 
     
