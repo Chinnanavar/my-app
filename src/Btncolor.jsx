@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import MyContext from './MyContext';
 const Btncolor = () => {
     const [color, setColor] = useState("red");
 
+    const{open} =useContext(MyContext)
+
     return (
         <div style={{ backgroundColor: `${color}` }}>
-            <h1>My favorite color is {color}!</h1>
+           { open &&<h1>My favorite color is {color}!</h1>}
             <button
                 type="button"
                 onClick={() => setColor("blue")}

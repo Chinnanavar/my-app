@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route, Form } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Color from './Color';
 import Btncolor from './Btncolor';
 import Incbtn from './Incbtn';
@@ -14,12 +14,32 @@ import App2 from './App2';
 import App3 from './App3';
 import Slider from './Slider';
 import From from './From';
+import Memo from './Memo';
+import Api from './Api';
+import Cards from './Cards';
+import DependentDropbox from './DepedentDropbox';
+import Accordion from './Accordian';
+import City from './Cities';
+import Acc from './Acc';
+import State from './State';
+import Home from './Home';
+import NamePage from './NamePage';
+import Provider from './Provider';
+import User from './User';
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <User name="John" age={30} email="john@example.com" />
+    <User name="Bob" age={20} email="bob@example.com" />
+    <User name="Alice" age={10} email="alice@example.com" />
+  <Provider>
       <Routes>
-        <Route path="/:name" element={<App />} />
+        <Route path="/:name" element={<App  />} />
         <Route path="/color" element={<Color />} />
         <Route path="/btncolor" element={<Btncolor />} />
         <Route path="/incbtn" element={<Incbtn />} />
@@ -30,7 +50,23 @@ root.render(
         <Route path="/app3" element={<App3 />} />
         <Route path="/slider" element={<Slider />} />
         <Route path="/form" element={<From />} />
+        <Route path="/memo" element={<Memo />} />
+        <Route path="/api" element={<Api />} />
+        <Route path="/cards" element={ <Cards />} />
+        <Route path="/country" element={ <DependentDropbox />} />
+        <Route path="/accordion" element={ <Accordion />} />
+        <Route path="/city" element={<City />} />
+        <Route path="/acc" element={<Acc />} />
+        <Route path="/state" element={<State />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/name/:name" element={<NamePage />} />
+       
+
+    
+     
       </Routes>
+
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

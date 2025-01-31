@@ -8,7 +8,7 @@ const From = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    
+    console.log(name, email, password)
   }
 
   const handleReset = (e) => {
