@@ -27,6 +27,7 @@ import NamePage from './NamePage';
 import Provider from './Provider';
 import User from './User';
 import CustomCounter from './CustomCounter';
+import ToogleLogin from './ToogleLogin';
 
 
 
@@ -59,6 +60,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/name/:name" element={<NamePage />} />
         <Route path='/custom' element={<CustomCounter />} />
+        <Route path='/login' element={<ToogleLogin />} />
        
 
     
